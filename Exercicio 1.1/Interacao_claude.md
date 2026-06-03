@@ -1,4 +1,4 @@
-# Cenario 1 - Iteracao com Claude
+# Cenario 1 - Interacao com Claude
 
 Use este arquivo para registrar cada interação com Claude em blocos padronizados.
 
