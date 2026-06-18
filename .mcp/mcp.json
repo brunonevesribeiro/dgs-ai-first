@@ -1,0 +1,46 @@
+{
+  "mcpServers": {
+    "github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "confluence": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@atlassian/mcp-confluence"],
+      "env": {
+        "CONFLUENCE_URL": "${CONFLUENCE_URL}",
+        "CONFLUENCE_USERNAME": "${CONFLUENCE_USERNAME}",
+        "CONFLUENCE_API_TOKEN": "${CONFLUENCE_API_TOKEN}"
+      }
+    },
+    "azure-devops": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@ymateus/mcp-azure-devops"],
+      "env": {
+        "AZURE_DEVOPS_ORG": "${AZURE_DEVOPS_ORG}",
+        "AZURE_DEVOPS_PROJECT": "${AZURE_DEVOPS_PROJECT}",
+        "AZURE_DEVOPS_TOKEN": "${AZURE_DEVOPS_PAT}"
+      }
+    },
+    "azure-ai-search": {
+      "type": "url",
+      "url": "${AZURE_SEARCH_MCP_ENDPOINT}",
+      "headers": {
+        "x-functions-key": "${AZURE_SEARCH_MCP_KEY}"
+      }
+    },
+    "azure-openai": {
+      "type": "url",
+      "url": "${AZURE_OPENAI_MCP_ENDPOINT}",
+      "headers": {
+        "x-functions-key": "${AZURE_OPENAI_MCP_KEY}"
+      }
+    }
+  }
+}
