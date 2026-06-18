@@ -35,3 +35,9 @@ effective_date: z.string()
   .regex(/^\d{4}-\d{2}-\d{2}$/, 
     "effective_date must be ISO 8601 (YYYY-MM-DD)")
   .optional()
+
+## Validação pós-correção
+
+Suíte executada em 2026-06-18 17:48:04
+13 testes — 13 passando, 0 falhando
+Correções de score range e effective_date format validadas.  
